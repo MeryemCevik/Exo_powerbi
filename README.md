@@ -159,6 +159,7 @@ pd.DataFrame(vulns).to_csv('vulnerabilites.csv', index=False)
 
 print("✅ 3 CSV générés")
 
+```python
 ---
 
 ## 🧹 Nettoyage des données
