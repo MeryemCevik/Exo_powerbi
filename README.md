@@ -1,10 +1,10 @@
-# 🛡️ CyberShield IT Analytics
+# CyberShield IT Analytics
 
 ## Dashboard décisionnel de suivi des incidents IT, des vulnérabilités et des actifs informatiques
 
 ---
 
-## 📋 Table des matières
+## Table des matières
 
 - [Contexte du projet](#contexte-du-projet)
 - [Objectifs](#objectifs)
@@ -23,7 +23,7 @@
 
 ---
 
-## 🎯 Contexte du projet
+## Contexte du projet
 
 Dans un contexte où les cyberattaques et les incidents informatiques augmentent constamment, les équipes IT doivent traiter quotidiennement des incidents (pannes réseau, erreurs applicatives, intrusions) et des vulnérabilités (failles de sécurité, CVE). Sans outil centralisé, il est difficile de :
 
@@ -37,7 +37,7 @@ Dans un contexte où les cyberattaques et les incidents informatiques augmentent
 
 ---
 
-## 🎯 Objectifs
+## Objectifs
 
 1. **Centraliser** les données relatives aux incidents, vulnérabilités et actifs
 2. **Nettoyer et modéliser** les données pour garantir leur fiabilité
@@ -48,7 +48,7 @@ Dans un contexte où les cyberattaques et les incidents informatiques augmentent
 
 ---
 
-## 📊 Description des données
+## Description des données
 
 Le projet s'appuie sur **4 tables** relationnelles simulant un environnement IT réel.
 
@@ -99,13 +99,13 @@ Le projet s'appuie sur **4 tables** relationnelles simulant un environnement IT 
 
 ---
 
-## 🔗 Diagramme ER
+## Diagramme ER
 
 ![Modèle relationnel](imgs/VueTables2.png)
 
 ---
 
-## 🐍 Génération des données
+## Génération des données
 
 Un script Python simple a été utilisé pour générer un jeu de données réaliste :
 
@@ -157,12 +157,12 @@ for i in range(1, 301):
     })
 pd.DataFrame(vulns).to_csv('vulnerabilites.csv', index=False)
 
-print("✅ 3 CSV générés")
+print(" 3 CSV générés")
 
 ```
 ---
 
-## 🧹 Nettoyage des données
+## Nettoyage des données
 
 ### Étapes dans Power Query
 
@@ -191,7 +191,7 @@ ADDCOLUMNS(
 )
 ```
 
-## 🗄️ Modélisation
+## Modélisation
 
 Le modèle de données suit une architecture en **étoile** :
 
@@ -222,7 +222,7 @@ ADDCOLUMNS(
 )
 ```
 
-## 📐 Mesures DAX
+## Mesures DAX
 
 ### KPI de base
 
@@ -309,7 +309,7 @@ SWITCH(
 )
 ```
 
-## 📈 Analyse des données
+## Analyse des données
 
 ### Incidents
 
@@ -348,7 +348,7 @@ SWITCH(
 
 ---
 
-## 📊 Dashboard
+## Dashboard
 
 ### Page 1 — Vue Globale
 
@@ -377,7 +377,7 @@ SWITCH(
 
 ---
 
-## 🎯 Résultats & Insights
+## Résultats & Insights
 
 ### Insight 1 — Le taux de correction des vulnérabilités est faible
 
@@ -413,7 +413,7 @@ SWITCH(
 
 ---
 
-## ✅ Recommandations
+## Recommandations
 
 1. **Prioriser les vulnérabilités critiques** (CVSS ≥ 9) avec un objectif de correction < 7 jours.
 2. **Automatiser le suivi** des incidents et vulnérabilités via le dashboard.
@@ -423,7 +423,7 @@ SWITCH(
 
 ---
 
-## 🛠️ Technologies utilisées
+## Technologies utilisées
 
 | Outil | Usage |
 |---|---|
@@ -435,14 +435,14 @@ SWITCH(
 
 ---
 
-## 👤 Auteur
+## Auteur
 
 **Meryem CEVIK**
-Master 1 MIAGE — Université de Haute-Alsace - Projet académique
+Master 1 MIAGE - Université de Haute-Alsace - Projet académique
 
 ---
 
-## 📎 Annexes
+## Annexes
 
 ### Requêtes SQL utilisées
 
