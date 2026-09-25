@@ -159,7 +159,7 @@ pd.DataFrame(vulns).to_csv('vulnerabilites.csv', index=False)
 
 print("✅ 3 CSV générés")
 
-```python
+```
 ---
 
 ## 🧹 Nettoyage des données
@@ -189,7 +189,7 @@ ADDCOLUMNS(
     "Semaine", WEEKNUM([Date]),
     "Trimestre", "T" & QUARTER([Date])
 )
-```dax
+```
 
 ## 🗄️ Modélisation
 
@@ -220,7 +220,7 @@ ADDCOLUMNS(
     "Semaine", WEEKNUM([Date]),
     "Trimestre", "T" & QUARTER([Date])
 )
-```dax
+```
 
 ## 📐 Mesures DAX
 
@@ -254,7 +254,7 @@ Nb Actifs = COUNTROWS(Actifs)
 
 Nb Actifs Critiques = 
 CALCULATE([Nb Actifs], Actifs[Criticite] = "Critique")
-```dax
+```
 
 ### KPI avancés (intelligence temporelle)
 
@@ -272,7 +272,7 @@ Nb Incidents 3 Mois Glissants =
 CALCULATE([Nb Incidents],
     DATESINPERIOD(Calendrier[Date], LASTDATE(Calendrier[Date]), -3, MONTH))
 
-```dax
+```
 
 ### KPI avancés (intelligence temporelle)
 
@@ -307,7 +307,7 @@ SWITCH(
     TxRes >= 0.5 && TxCor >= 0.5, "Moyen",
     "À améliorer"
 )
-```dax
+```
 
 ## 📈 Analyse des données
 
@@ -477,4 +477,4 @@ JOIN Actifs a ON v.Actif_ID = a.Actif_ID
 WHERE v.Criticite = 'Critique' AND v.Statut != 'Corrigée'
 ORDER BY v.CVSS_Score DESC;
 
-```sql
+```
